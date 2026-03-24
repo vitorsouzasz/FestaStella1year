@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Aniversário da Stella</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(#fce4ec, #e0f7fa);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background: white;
+      margin: 50px auto;
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #ff4081;
+    }
+
+    input, select, button {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e73370;
+    }
+
+    .info {
+      font-size: 14px;
+      margin-top: 15px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🌸 Stella faz 1 aninho 🌸</h1>
+    <p>Tema: Jardim Encantado 🦋🌼</p>
+
+    <p><strong>📅 Data:</strong> 16/08/2026</p>
+    <p><strong>📍 Local:</strong> Espaço Kieza</p>
+
+    <h3>Confirme sua presença 💌</h3>
+
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="number" id="pessoas" placeholder="Quantidade de pessoas" required>
+
+    <select id="presenca">
+      <option value="">Você vai?</option>
+      <option value="Sim">Sim 😊</option>
+      <option value="Não">Não 😢</option>
+    </select>
+
+    <button onclick="confirmar()">Confirmar Presença</button>
+
+    <p class="info">Sua presença é muito importante para nós 💖</p>
+  </div>
+
+  <script>
+    function confirmar() {
+      let nome = document.getElementById("nome").value;
+      let pessoas = document.getElementById("pessoas").value;
+      let presenca = document.getElementById("presenca").value;
+
+      if(nome === "" || pessoas === "" || presenca === "") {
+        alert("Preencha todos os campos!");
+        return;
+      }
+
+      alert("Obrigado, " + nome + "! 🎉\\nSua resposta foi registrada.");
+
+      // Aqui você pode futuramente integrar com banco de dados ou WhatsApp
+    }
+  </script>
+
+</body>
+</html>
